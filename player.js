@@ -22,6 +22,6 @@ class Player {
   show() {
     fill(150, 0, 180)
     noStroke()
-    circle(this.pos.x, this.pos.y, 4)
+    circle(this.pos.x, this.pos.y, 6)
   }
 }

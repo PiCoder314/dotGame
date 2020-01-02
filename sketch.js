@@ -5,7 +5,9 @@ let v = 0
 let a = 0
 let score = 0
 function setup() {
-  const size = windowWidth > windowHeight ? windowHeight : windowWidth
+  const size = 
+    windowWidth > windowHeight ? 
+    windowHeight : windowWidth
   createCanvas(size, size);
   dot = new Player()
   frameRate(30)
@@ -18,9 +20,9 @@ function draw() {
   circle(0, 0, width/1.2)
   if (mouseIsPressed) {
     // translate co-ords
-    x = mouseX - width/2
-    y = mouseY - height/2
-    mousePos = createVector(x,y)
+    mx = mouseX - width/2
+    my = mouseY - height/2
+    mousePos = createVector(mx,my)
     force = mousePos.sub(dot.pos)
     dot.applyForce(force)
   }
@@ -39,7 +41,7 @@ function draw() {
 }
 
 function gameOver() {
-  background(255,0,0)
+  background(198, 40, 40)
   textSize(32)
   textAlign(CENTER, CENTER)
   fill(255)
